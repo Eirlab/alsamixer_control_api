@@ -18,3 +18,7 @@ def on():
     os.system("amixer set Capture 100%")
     return "on"
 
+@app.route('/<volume>')
+def volume(volume):
+    os.system("amixer set Capture " + volume + "%")
+    return "volume"
